@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home_navgraph"
+    app:startDestination="@id/solarMapFragment">
+
+    <fragment
+        android:id="@+id/solarMapFragment"
+        android:name="com.example.spacetapp.Home.solarmap.view.SolarMapFragment"
+        android:label="Solar Map"
+        tools:layout="@layout/fragment_solar_map">
+        <action
+            android:id="@+id/action_solarMapFragment_to_exploreFragment"
+            app:destination="@id/exploreFragment" />
+        <action
+            android:id="@+id/action_solarMapFragment_to_aboutFragment"
+            app:destination="@id/aboutFragment" />
+        <action
+            android:id="@+id/action_solarMapFragment_to_reservationFragment"
+            app:destination="@id/reservationFragment" />
+        <action
+            android:id="@+id/action_solarMapFragment_to_marsExploreFragment"
+            app:destination="@id/marsExploreFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/exploreFragment"
+        android:name="com.example.spacetapp.Home.ExploreFragment"
+        android:label="Explore"
+        tools:layout="@layout/fragment_explore">
+        <action
+            android:id="@+id/action_exploreFragment_to_articleFragment"
+            app:destination="@id/articleFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/articleFragment"
+        android:name="com.example.spacetapp.Home.ArticleFragment"
+        android:label="fragment_article"
+        tools:layout="@layout/fragment_article">
+        <action
+            android:id="@+id/action_articleFragment_to_videoFragment"
+            app:destination="@id/videoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/videoFragment"
+        android:name="com.example.spacetapp.Home.VideoFragment"
+        android:label="VideoFragment">
+        <action
+            android:id="@+id/action_videoFragment_to_quizFragment"
+            app:destination="@id/quizFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/quizFragment"
+        android:name="com.example.spacetapp.Home.QuizFragment"
+        android:label="fragment_quiz"
+        tools:layout="@layout/fragment_quiz" >
+        <action
+            android:id="@+id/action_quizFragment_to_mapFragment"
+            app:destination="@id/mapFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="com.example.spacetapp.Home.AboutFragment"
+        android:label="fragment_about"
+        tools:layout="@layout/fragment_about" >
+        <action
+            android:id="@+id/action_aboutFragment_to_solarMapFragment"
+            app:destination="@id/solarMapFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/reservationFragment"
+        android:name="com.example.spacetapp.Home.ReservationFragment"
+        android:label="ReservationFragment" >
+        <action
+            android:id="@+id/action_reservationFragment_to_solarMapFragment"
+            app:destination="@id/solarMapFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/marsExploreFragment"
+        android:name="com.example.spacetapp.Home.MarsExploreFragment"
+        android:label="MarsExploreFragment" >
+        <action
+            android:id="@+id/action_marsExploreFragment_to_marsArticleFragment"
+            app:destination="@id/marsArticleFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/marsArticleFragment"
+        android:name="com.example.spacetapp.Home.MarsArticleFragment"
+        android:label="MarsArticleFragment" >
+        <action
+            android:id="@+id/action_marsArticleFragment_to_marsVideoFragment"
+            app:destination="@id/marsVideoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/marsVideoFragment"
+        android:name="com.example.spacetapp.Home.MarsVideoFragment"
+        android:label="MarsVideoFragment" >
+        <action
+            android:id="@+id/action_marsVideoFragment_to_marssQuizFragment"
+            app:destination="@id/marssQuizFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/marssQuizFragment"
+        android:name="com.example.spacetapp.Home.MarssQuizFragment"
+        android:label="MarssQuizFragment" >
+        <action
+            android:id="@+id/action_marssQuizFragment_to_solarMapFragment"
+            app:destination="@id/solarMapFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mapFragment"
+        android:name="com.example.spacetapp.Home.MapFragment"
+        android:label="MapFragment" >
+        <action
+            android:id="@+id/action_mapFragment_to_reservationFragment"
+            app:destination="@id/reservationFragment" />
+        <action
+            android:id="@+id/action_mapFragment_to_solarMapFragment2"
+            app:destination="@id/solarMapFragment" />
+    </fragment>
+</navigation>
